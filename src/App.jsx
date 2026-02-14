@@ -1,11 +1,14 @@
 import React from 'react'
+import AuthCard from './Components/Auth'
+import Footer from './Components/Footer'
+import Navbar from './Components/Navbar'
 
 const App = () => {
   return (
     <div>
-      <h1 class="text-3xl font-bold underline bg-amber-950">
-    Hello world!
-  </h1>
+      <Navbar />
+      {/* <AuthCard /> */}
+    <Footer />
     </div>
   )
 }
