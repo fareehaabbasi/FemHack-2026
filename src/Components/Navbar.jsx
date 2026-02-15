@@ -3,6 +3,8 @@ import { NavbarMenu } from "../data/NavData";
 import { FaShoppingCart } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import ResponsiveMenu from "./ResponsiveNavenu";
+import client from "../Config/config";
+import { useNavigate } from "react-router-dom";
 
 import { Link, useLocation } from "react-router-dom";
 
@@ -13,15 +15,20 @@ export default function Navbar() {
   const location = useLocation();
   const pathname = location.pathname;
 
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    await client.auth.signOut();
+    navigate("/login");
+  };
+
   return (
     <>
       <nav>
         <div className="container max-w-full">
           <div className="flex items-center max-w-6xl mx-auto px-4 justify-between py-2">
-
             {/* logo section */}
             <div className="flex items-center justify-between space-x-2">
-
               <div className="md:block hidden">
                 <h2 className="sm:text-xl" style={{ fontFamily: "LostFish" }}>
                   WebDev
@@ -61,12 +68,11 @@ export default function Navbar() {
                 })}
               </ul>
 
-              {/* cart icon */}
-              <button className="text-2xl hover:bg-primaryBlue hover:text-white rounded-full p-2 duration-200">
-                <FaShoppingCart
-                  size={26}
-                  className="text-darkNavy font-extrabold cursor-pointer hover:text-white"
-                />
+              <button
+                onClick={handleLogout}
+                className="bg-red-500 text-white px-4 py-2 rounded"
+              >
+                Logout
               </button>
             </div>
 
