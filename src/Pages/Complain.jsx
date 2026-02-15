@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import client from "../Config/config";
+import logo from "../assets/Images/logo.png"
 import { toast, Toaster } from 'react-hot-toast';
 
 export default function Complaint() {
@@ -201,7 +202,7 @@ export default function Complaint() {
         <div className="text-center mb-8 animate-slide-down">
           <div className="inline-block p-4 bg-white rounded-full shadow-xl mb-4">
             <img 
-              src="/saylani-logo.png" 
+              src={logo}
               width="80" 
               alt="Saylani Logo" 
               className="hover:scale-110 transition-transform duration-300"
