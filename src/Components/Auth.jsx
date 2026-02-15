@@ -2,7 +2,7 @@ import { useState } from "react";
 import client from "../Config/config";
 import Swal from "sweetalert2";
 
-export default function AuthCard() {
+export default function Auth() {
   const [isSignup, setIsSignup] = useState(false);
 
   const [formData, setFormData] = useState({
