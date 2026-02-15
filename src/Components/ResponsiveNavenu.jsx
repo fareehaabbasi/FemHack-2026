@@ -15,9 +15,10 @@ const ResponsiveMenu = ({open}) => {
                 <div className='text-xl font-semibold uppercase py-10 m-6 rounded-3xl bg-[#0057a8] text-white'>
                     <ul className='flex flex-col justify-center items-center gap-10 cursor-pointer'>
                         <li><a href="/">Home</a></li>
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/product">Product</a></li>
-                        <li><a href="/explore">Explore</a></li>
+                        <li><a href="/Dashboard">Dashboard</a></li>
+                        <li><a href="/LostFound">Lost & Found</a></li>
+                        <li><a href="/complain">Complains</a></li>
+                        <li><a href="/voluntair">Volunteer</a></li>
                     </ul>
                 </div>
             </motion.div>

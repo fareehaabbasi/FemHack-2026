@@ -6,6 +6,7 @@ import Auth from "./Components/Auth";
 import Dashboard from "./Pages/Dashboard";
 import LostFound from "./Pages/LostFound";
 import ProtectedRoute from "./Components/ProtectedRoute";
+import HomePage from "./Pages/Home";
 
 const App = () => {
   return (
@@ -13,6 +14,8 @@ const App = () => {
       <Navbar />
 
       <Routes >
+
+        <Route path="/" element={<HomePage />} />
       <Route
   path="/Dashboard"
   element={
