@@ -30,9 +30,7 @@ export default function Navbar() {
             {/* logo section */}
             <div className="flex items-center justify-between space-x-2">
               <div className="md:block hidden">
-                <h2 className="sm:text-xl" style={{ fontFamily: "LostFish" }}>
-                  WebDev
-                </h2>
+                <img src="../assets/Images/logo.png" alt="logo" className="h-12 w-auto" />
               </div>
 
               <div className="md:hidden sm:block min-[640px]:hidden max-[400px]:hidden">
