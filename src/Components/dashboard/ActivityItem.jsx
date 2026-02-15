@@ -1,5 +1,5 @@
 import React from 'react';
-import StatusBadge from '../common/StatusBadge';
+import StatusBadge from '../../Components/common/StatusBadge.jsx';
 
 const ActivityItem = ({ activity, onClick }) => {
   // Activity type ke hisaab se icon aur color set karna
