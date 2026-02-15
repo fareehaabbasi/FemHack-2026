@@ -6,7 +6,10 @@ import Auth from "./Components/Auth";
 import Dashboard from "./Pages/Dashboard";
 import LostFound from "./Pages/LostFound";
 import ProtectedRoute from "./Components/ProtectedRoute";
-import HomePage from "./Pages/Home";
+import Home from "./Pages/Home";
+import Volunteer from "./Pages/Voluntair";
+import Complaint from "./Pages/Complain";
+
 
 const App = () => {
   return (
@@ -15,7 +18,11 @@ const App = () => {
 
       <Routes >
 
-        <Route path="/" element={<HomePage />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
+      <Route path="/Volunteer" element={<Volunteer/>} />
+      <Route path="/Complaints" element={<Complaint/>} />
+
+        <Route path="/" element={<Home/> } />
       <Route
   path="/Dashboard"
   element={

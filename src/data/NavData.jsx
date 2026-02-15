@@ -16,12 +16,12 @@ export const NavbarMenu = [
   },
   {
     id: 4,
-    title: "Complains",
-    link: "/complaints"
+    title: "Complaints",
+    link: "/Complaints"
   },
   {
     id: 5,
     title: "Volunteer",
-    link: "/volunteer"
+    link: "/Volunteer"
   }
 ];
