@@ -19,37 +19,35 @@ const App = () => {
       <Routes >
 
         <Route path="/Dashboard" element={<Dashboard />} />
-      <Route path="/Volunteer" element={<Volunteer/>} />
-      <Route path="/Complaints" element={<Complaint/>} />
+        <Route path="/Volunteer" element={<Volunteer />} />
+        <Route path="/Complaints" element={<Complaint />} />
 
-        <Route path="/" element={<Home/> } />
-      <Route
-  path="/Dashboard"
-  element={
-    <ProtectedRoute>
-      <Dashboard />
-    </ProtectedRoute>
-  }
-/>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/Dashboard"
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        />
 
-<Route
-  path="/LostFound"
-  element={
-    <ProtectedRoute>
-      <LostFound />
-    </ProtectedRoute>
-  }
-/>
+        <Route
+          path="/LostFound"
+          element={
+              <LostFound />
+          }
+        />
 
-<Route
-  path="/Authentication"
-  element={
-      <Auth />
-  }
-/>
+        <Route
+          path="/Authentication"
+          element={
+            <Auth />
+          }
+        />
 
 
-{/* <Route
+        {/* <Route
   path="/complaints"
   element={
     <ProtectedRoute>
