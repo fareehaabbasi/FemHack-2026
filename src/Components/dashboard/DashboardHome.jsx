@@ -263,40 +263,10 @@ const DashboardHome = ({ user }) => {
               Quick Actions
             </h2>
             
-            <div className="space-y-4">
-              <button 
-                className="w-full group relative overflow-hidden rounded-xl bg-gradient-to-r from-[#66b032] to-[#66b032]/80 text-white p-4 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
-                onClick={() => window.location.href = '/lost-found'}
-              >
-                <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                <div className="relative flex items-center justify-between">
-                  <span className="font-semibold">📦 Report Lost Item</span>
-                  <span className="group-hover:translate-x-1 transition-transform">→</span>
-                </div>
-              </button>
+            
+          
 
-              <button 
-                className="w-full group relative overflow-hidden rounded-xl bg-gradient-to-r from-[#0057a8] to-[#0057a8]/80 text-white p-4 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
-                onClick={() => window.location.href = '/complaints'}
-              >
-                <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                <div className="relative flex items-center justify-between">
-                  <span className="font-semibold">⚡ Submit Complaint</span>
-                  <span className="group-hover:translate-x-1 transition-transform">→</span>
-                </div>
-              </button>
-
-              <button 
-                className="w-full group relative overflow-hidden rounded-xl bg-gradient-to-r from-gray-700 to-gray-800 text-white p-4 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
-                onClick={() => window.location.href = '/volunteer'}
-              >
-                <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                <div className="relative flex items-center justify-between">
-                  <span className="font-semibold">🤝 Register as Volunteer</span>
-                  <span className="group-hover:translate-x-1 transition-transform">→</span>
-                </div>
-              </button>
-            </div>
+              
 
             {/* Quick Stats */}
             <div className="mt-8 pt-6 border-t border-gray-200">

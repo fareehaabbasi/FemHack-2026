@@ -66,7 +66,7 @@ export default function Auth() {
     Swal.fire("Login Successful!", "", "success");
 
     setTimeout(() => {
-      window.location.href = "/post";
+      window.location.href = "/Dashboard";
     }, 1500);
   };
 
