@@ -12,7 +12,7 @@ export const NavbarMenu = [
   {
     id: 3,
     title: "Lost & Found",
-    link: "/lostfound"
+    link: "/LostFound"
   },
   {
     id: 4,

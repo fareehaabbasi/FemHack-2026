@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+:root {
+  --saylani-green: #66b032;
+  --saylani-blue: #0057a8;
+}
+
+.saylani-btn {
+  background: var(--saylani-green);
+  color: white;
+}
+
+.saylani-btn:hover {
+  background: #57992b;
+}
+
+.saylani-header {
+  color: var(--saylani-blue);
+}
+
+.saylani-card {
+  border-left: 5px solid var(--saylani-green);
+}
