@@ -1,12 +1,50 @@
-# React + Vite
+# Saylani Mass IT Hub Portal 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive web portal built for **Saylani Mass IT Hub** to create a centralized digital space for students and staff.
 
-Currently, two official plugins are available:
+The platform provides useful services such as **Lost & Found, Complaints, Volunteer Activities, and an Admin Dashboard**, all accessible through a simple and user-friendly interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🌐 Live Demo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🔗 **Live Website:**  
+https://beamish-trifle-ff71ff.netlify.app/
+
+---
+
+## 📖 About The Project
+
+The **Saylani Mass IT Hub Portal** was created to solve common communication and management problems faced by students and staff.
+
+Instead of handling different activities separately, the portal brings important services together in one platform.
+
+Users can report complaints, submit lost or found items, explore volunteer opportunities, and access the available services from a single dashboard.
+
+The project also includes **Supabase Authentication** with a protected Admin Dashboard.
+
+---
+
+## ✨ Features
+
+### 🔐 Authentication
+
+- User Sign Up
+- User Login
+- Supabase Authentication
+- Secure Logout
+- Login/Logout state in Navbar
+- Separate Admin access
+- Protected Admin Dashboard
+
+### 👑 Admin Dashboard
+
+The Admin Dashboard is restricted to the administrator.
+
+Only the configured admin account can access the Dashboard.
+
+**Demo Admin Credentials:**
+
+```text
+Email: admin@gmail.com
+Password: admin123
