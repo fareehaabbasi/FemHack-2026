@@ -9,16 +9,22 @@ import ProtectedRoute from "./Components/ProtectedRoute";
 import Home from "./Pages/Home";
 import Volunteer from "./Pages/Voluntair";
 import Complaint from "./Pages/Complain";
-
+import AdminRoute from "./Components/dashboard/AdminRoute";
 
 const App = () => {
   return (
     <div>
       <Navbar />
 
-      <Routes >
-
-        <Route path="/Dashboard" element={<Dashboard />} />
+      <Routes>
+        <Route
+          path="/Dashboard"
+          element={
+            <AdminRoute>
+              <Dashboard />
+            </AdminRoute>
+          }
+        />
         <Route path="/Volunteer" element={<Volunteer />} />
         <Route path="/Complaints" element={<Complaint />} />
 
@@ -32,20 +38,9 @@ const App = () => {
           }
         />
 
-        <Route
-          path="/LostFound"
-          element={
-              <LostFound />
-          }
-        />
+        <Route path="/LostFound" element={<LostFound />} />
 
-        <Route
-          path="/Authentication"
-          element={
-            <Auth />
-          }
-        />
-
+        <Route path="/Authentication" element={<Auth />} />
 
         {/* <Route
   path="/complaints"

@@ -109,36 +109,47 @@ export default function Auth() {
 
   // ---------- LOGIN ----------
   const handleLogin = async () => {
-    const { email, password } = formData;
+  const { email, password } = formData;
 
-    if (!email || !password) {
+  if (!email || !password) {
+    Swal.fire({
+      title: "Missing Fields",
+      text: "Please enter email and password!",
+      icon: "error",
+    });
+    return;
+  }
+
+  try {
+    setLoading(true);
+
+    const { data, error } = await client.auth.signInWithPassword({
+      email,
+      password,
+    });
+
+    if (error) {
       Swal.fire({
-        title: "Missing Fields",
-        text: "Please enter email and password!",
+        title: "Login Failed!",
+        text: error.message,
         icon: "error",
       });
       return;
     }
 
-    try {
-      setLoading(true);
+    if (data?.user) {
+      // Check if this is the admin account
+      const isAdmin = data.user.email === "admin@gmail.com";
 
-      const { data, error } = await client.auth.signInWithPassword({
-        email,
-        password,
-      });
-
-      if (error) {
-        Swal.fire({
-          title: "Login Failed!",
-          text: error.message,
-          icon: "error",
+      if (isAdmin) {
+        await Swal.fire({
+          title: "Admin Login Successful!",
+          text: "Welcome Admin!",
+          icon: "success",
+          timer: 1200,
+          showConfirmButton: false,
         });
-        return;
-      }
-
-      // Make sure user is actually logged in
-      if (data?.user) {
+      } else {
         await Swal.fire({
           title: "Login Successful!",
           text: "Welcome back!",
@@ -146,20 +157,26 @@ export default function Auth() {
           timer: 1200,
           showConfirmButton: false,
         });
-
-        // Redirect to Dashboard
-        navigate("/");
       }
-    } catch (error) {
-      Swal.fire({
-        title: "Something went wrong!",
-        text: error.message,
-        icon: "error",
-      });
-    } finally {
-      setLoading(false);
-    }
+
+      // Admin → Dashboard
+  if (data.user.email === "admin@gmail.com") {
+    navigate("/Dashboard");
+  } else {
+    // Normal User → Home
+    navigate("/");
   };
+    }
+  } catch (error) {
+    Swal.fire({
+      title: "Something went wrong!",
+      text: error.message,
+      icon: "error",
+    });
+  } finally {
+    setLoading(false);
+  }
+};
 
   // ---------- SWITCH LOGIN / SIGNUP ----------
   const handleSwitch = () => {
